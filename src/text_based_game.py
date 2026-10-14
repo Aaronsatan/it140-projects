@@ -6,9 +6,11 @@
 def show_instructions():
     """Display the game objective and available commands."""
     # TODO: Print instructions that match your game and commands.
-    pass
-
-
+    print("DEATH METAL VS RAP")
+        print("Collect all six metal artifacts to defeat the Rap King!") 
+        print(Move: go north, go south, go east, go west")
+                print("Collect items: get item name")
+                print("Type exit to quit the game.")
 def show_status(current_room, inventory, rooms):
     """Display the player's current game status."""
     # TODO: Show the current room.
