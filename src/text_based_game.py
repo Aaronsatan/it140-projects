@@ -67,7 +67,7 @@ def main():
 
     while True:
         show_status(current_room,inventory, rooms)
-        command = input("Enter your move: ").lower().strip())
+        command = input("Enter your move: ").lower().strip()
         if command == 'exit':
             print("Thanks for playing Death Metal vs Rap!")
             break
@@ -77,8 +77,8 @@ def main():
                 current_room = rooms [current_room][direction]
                 print("You entered", current_room)
             else:
-            print("You cannot go that way!")
-            continue
+                print("You cannot go that way!")
+                continue
         elif command.startswith('get '):
             item_name = command[4:]
             room_item = rooms [current_room].get('item')
@@ -90,13 +90,13 @@ def main():
                 print("That item is not here!")
         else:
             print("Invalid command!")
-    if current_room == "Rap King's Arena":
-        if len(inventory) == 6:
-        print("You defeated the Rap King! You win!")
-            break
-        else:
-            print("The Rap King defeated you! Game over!")
-            break
+        if current_room == "Rap King's Arena":
+            if len(inventory) == 6:
+                print("You defeated the Rap King! You win!")
+                break
+            else:   
+                print("The Rap King defeated you! Game over!")
+                break
                 
 if __name__ == "__main__":
     main()
