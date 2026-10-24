@@ -6,11 +6,25 @@
 
 
 
+def show_instructions():
+    print("DEATH METAL VS RAP")
+    print("Collect all six metal artifacts to defeat the Rap King!")
+    print("Move: go north, go south, go east, go west")
+    print("Collect items: get item name")
+    print("Type exit to quit the game.")
 
 
+def show_status(current_room, inventory, rooms):
+    print("Current room:", current_room)
+    print("Inventory:",inventory)
+    if 'item' in rooms [current_room] :
+        print("You see:", rooms[current_room] ['item'])
 
 def main():
-    
+    rooms = {
+        'Swedish Rehearsal Dungeon':{
+            'West': 'Frozen Record Store',
+            'North': "Rap King's Arena"
         },
         'Frozen Record Store': {
             'East': 'Swedish Rehearsal Dungeon',
@@ -76,15 +90,14 @@ def main():
                 print("That item is not here!")
         else:
             print("Invalid command!")
-        if current_room == "Rap King's Arena":
-            if len(inventory) == 6:
-                print("You defeated the Rap King! You win!")
-                break
-            else:
-                print("The Rap King defeated you! Game over!")
-                break
+    if current_room == "Rap King's Arena":
+        if len(inventory) == 6:
+        print("You defeated the Rap King! You win!")
+            break
+        else:
+            print("The Rap King defeated you! Game over!")
+            break
                 
-
-
 if __name__ == "__main__":
     main()
+
